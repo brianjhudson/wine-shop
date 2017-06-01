@@ -1,0 +1,12 @@
+.address-box.shop {
+  vertical-align: super;
+  color: $pal-green;
+}
+.address-icon.shop {
+  vertical-align: super;
+  overflow: hidden;
+  display: inline-block;
+  height: 25px;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

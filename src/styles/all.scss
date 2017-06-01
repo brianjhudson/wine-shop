@@ -1,0 +1,49 @@
+$pal-black: #414141;
+$pal-red: #ef4036;
+$pal-supernav-white: #f2f5f7;
+$pal-searchbar-grey: #e2e2e2;
+$pal-lightgrey: #e8e8e8;
+$pal-icon-grey: #7b7b7d;
+$pal-green: #17d6b2;
+$pal-greenhighlight: #18fbd0;
+$pal-footer-grey: #dce1e5;
+// black link font on footer
+$pal-header-footer-link: #484d56;
+// black text font on footer
+$pal-header-footer-text: #2a678f;
+// black social media icons on footer
+$pal-header-footer-icons: #727786;
+$pal-supernav-text: #595D66;
+
+//Base
+// @import "./base/reset";
+// @import "./base/bootstrap.min.css";
+@import "./base/mixins";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+* {
+  font-family: "Roboto", sans-serif !important;
+}
+
+// Component
+@import "../component/App/App.scss";
+@import "../component/Cart/Cart.scss";
+@import "../component/Checkout/Checkout.scss";
+@import "../component/Error/Error.scss";
+@import "../component/Footer/Footer.scss";
+@import "../component/Home/Home.scss";
+@import "../component/Nav/Nav.scss";
+@import "../component/Navbar/Navbar.scss";
+@import "../component/Shop/Shop.scss";
+@import "../component/SuperNav/SuperNav.scss";
+@import "../component/WineStoreCard/WineStoreCard.scss";
+
+// Container
+@import "../container/AddressIcon/AddressIcon.scss";
+@import "../container/SearchBox/SearchBox.scss";
+@import "../container/ShopSideBar/ShopSideBar.scss";
+@import "../container/SingleWine/SingleWine.scss";
+@import "../container/Store/Store.scss";
+@import "../container/UserIcon/UserIcon.scss";
+@import "../container/WineList/WineList.scss";
+
