@@ -10,24 +10,16 @@ export default function Home(props){
       <div className="home-wrapper shop">
 
         <div className="cta row shop">
-          <div className="col-md-12 shop">
-            <MuiThemeProvider>
-              <Paper
-                style={ styles.jumbotron }
-                zDepth={1}
-                rounded={false}
-                >
-                <img src={grapes} className="cta-image"/>
-                <div className="cta-div">
+          <div className="col-xs-12 shop splash">
+            <img src={grapes} alt=""/>
+            <div className="cta-div">
+                <div className="cta-parse">
+                  Wines for your home.
+                </div>
                 <div className="cta-button">
                   Search
                 </div>
-                <div className="cta-parse">
-                  Discover new and exciting wines from the comfort of your home.
-                </div>
-                </div>
-              </Paper>
-            </MuiThemeProvider>
+            </div>
           </div>
         </div>
 
@@ -35,7 +27,6 @@ export default function Home(props){
             <div className="featured-span col-xs-12 col-sm-12 col-md-4 shop">
               <MuiThemeProvider>
               <Paper
-                style={ styles.category }
                 zDepth={1}
                 rounded={false}
                 >
@@ -81,7 +72,6 @@ export default function Home(props){
             <div className="featured-span col-xs-12 col-sm-12 col-md-4 shop">
               <MuiThemeProvider>
               <Paper
-                style={ styles.category }
                 zDepth={1}
                 rounded={false}
                 >
@@ -104,12 +94,3 @@ export default function Home(props){
       </div>
   );
 }
-
-const styles = {
-  jumbotron: {
-    height: "300px"
-    , width: "100%"
-    , position:'relative'
-    , overflow:'hidden'
-  }
-};
