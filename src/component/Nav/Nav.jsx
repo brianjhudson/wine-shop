@@ -7,25 +7,34 @@ import {Link, browserHistory} from "react-router";
 export default function Nav(){
 
   return(
-    <div className="nav shop">
-
-      <div className="col-md-offset-1 col-md-2 logo-wrapper shop">
-        <Link to="/"><h1>Fero Vino</h1></Link>
-      </div>
-
-      <div className="col-md-1 searchbar-wrapper shop">
-        <SearchBox></SearchBox>
-      </div>
-
-      <div className="col-md-1 col-md-offset-3 wine-button shop">
-        <Link to="/shop">Wines</Link>
-      </div>
-
-      <div className="col-md-1 shopping-cart-button-wrapper shop">
-        <Link to="/cart">Cart</Link>
-      </div>
-
-
+    <div>
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <Link id="navbar-brand" to="/">Fero Vino</Link>
+          </div>
+          <div id="navbar-collapse"
+            className="collapse navbar-collapse">
+            <ul className="nav navbar-nav navbar-right">
+              <li className="searchbar-wrapper shop">
+                <SearchBox></SearchBox>
+              </li>
+              <li className="wine-button shop">
+                <Link to="/shop">Wines</Link>
+              </li>
+              <li className="shopping-cart-button-wrapper shop">
+                <Link to="/cart">Cart</Link>
+              </li>
+            </ul>
+          </div>        
+        </div>
+      </nav>
     </div>
   );
 }
