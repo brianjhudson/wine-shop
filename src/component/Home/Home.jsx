@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router";
+import {Link, browserHistory} from "react-router";
 import Paper from 'material-ui/Paper';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import grapes from "../../images/green_grapes.jpeg";
@@ -12,14 +12,14 @@ export default function Home(props){
         <div className="cta row shop">
           <div className="col-xs-12 shop splash">
             <img src={grapes} alt=""/>
-            <div className="cta-div">
-                <div className="cta-parse">
-                  Wines for your home.
-                </div>
-                <div className="cta-button">
-                  Search
-                </div>
-            </div>
+              <div className="cta-div row">
+                  <div className="cta-parse">
+                    <span>Wines</span> for your home.
+                  </div>
+                  <div className="cta-button" onClick={() => {browserHistory.push("shop")}}>
+                    Shop Now
+                  </div>
+              </div>
           </div>
         </div>
 
