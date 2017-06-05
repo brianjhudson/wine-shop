@@ -26,14 +26,12 @@ export default class Shop extends Component {
   render(){
     return(
       <div>
-        <div className="container shop">
-          <div className="row shop">
-            <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 ctrlPnl-container shop" style={{maxWidth:241}}>
-              <ShopSideBar></ShopSideBar>
-            </div>
-            <div className="col-xs-9 col-sm-8 col-md-9 col-lg-9 store-container shop" style={{paddingLeft:10, marginTop:10, overflowY:'scroll', height:'841px'}}>
-              <Store></Store>
-            </div>
+        <div className="row shop">
+          <div className="hidden-xs hidden-sm col-md-4 col-lg-3 ctrlPnl-container shop">
+            <ShopSideBar></ShopSideBar>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9 store-container shop" style={{paddingLeft:10, marginTop:10}}>
+            <Store></Store>
           </div>
         </div>
       </div>

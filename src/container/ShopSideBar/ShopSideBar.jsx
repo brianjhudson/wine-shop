@@ -32,30 +32,17 @@ class ShopSideBar extends Component{
     return(
       <div>
         <MuiThemeProvider>
-          <Paper style={style} rounded={false} zDepth={1}>
-            <div className="row select-container">
-              <SelectField
-                value={this.state.value}
-                onChange={this.handleChange.bind(this)}
-                style={{width:'100%'}}
-              >
-                <MenuItem value={0} primaryText="Sort" />
-                <MenuItem value={1} primaryText="Popularity" />
-                <MenuItem value={2} primaryText="Max Price" />
-                <MenuItem value={3} primaryText="Min Price" />
-              </SelectField>
-            </div>
+          <Paper rounded={false} zDepth={1}>
             <div className="row category-container">
-                <h2 className="category-title">Main Styles</h2>
-                <Divider></Divider>
+                <h2 className="category-title">Select Styles</h2>
                 <table>
                   <tbody className="col-xs-12">
                   {this.props.wines.categories.map((category, index) => (
-                    <tr key={category._id} className="col-xs-12">
-                      <td className="col-xs-8">
+                    <tr key={category._id} className="row">
+                      <td className="col-xs-10">
                         <Checkbox onClick={this.searchWines.bind(this, category)} label={category.varietal}/>
                       </td>
-                      <td className="col-xs-4" className="category-count">({category.qty})</td>
+                      <td className="col-xs-2" className="category-count">({category.qty})</td>
                     </tr>
                   ))}                  
                   </tbody>
@@ -69,19 +56,3 @@ class ShopSideBar extends Component{
   }
 }
 export default connect(state => ({wines: state.wines}))(ShopSideBar)
-const style = {
-  height: '100%',
-  marginTop:20,
-  width:'100%',
-  marginRigth:5,
-  textAlign: 'center',
-  display: 'inline-block',
-};
-const styles = {
-  block: {
-    maxWidth: 250,
-  },
-  RadioButton: {
-    marginBottom: 16,
-  },
-};
